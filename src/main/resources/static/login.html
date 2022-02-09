@@ -15,17 +15,54 @@ author: dmurillo
         <script src="./js/scripts.js"></script>
     </head>
     <body>
-        <div class="main-container">            
+        <div class="main-container">
+
+            <!-- MENU -->
+            <div class="container menu">
+        
+                <div class="grid">
+                    <div class="logo">
+                        <img class="logo-image" src="./images/logo.png" alt="logo"/>
+                    </div>
+                    <nav>
+                        <ul class="menu-items">
+                            <li class="menu-item nav-img"><a href="/index.html" class="menu-link active">Home</a></li>
+                            <li class="menu-item nav-img"><a href="/videos.html" class="menu-link">Videos</a></li>
+                            <li class="menu-item nav-img"><a href="/about.html" class="menu-link">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="grid">
+                    <div class="side-menu">
+                          <ul class="menu-items">
+                            <li><a href="/cart.html" class="shop-img"></a></li>
+                            <li class="menu-item nav-img"><a href="/login.html" class="menu-link">login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
             <!-- TITULOS -->
             <div class="container">
                 <div class="page-title">
                     <h1>Login</h1>
                 </div>
-            </div>
+            </div>  
 
             <!-- CONTENIDOS -->
             <div class="container">
-
+                <!<!-- LOGIN -->
+                <form>  
+                    <div class="login-container">   
+                        <label>Username : </label>   
+                        <input type="text" placeholder="Enter Username" name="username" required>  
+                        <label>Password : </label>   
+                        <input type="password" placeholder="Enter Password" name="password" required>  
+                        <button type="submit">Login</button>   
+                        <input type="checkbox" checked="checked"> Remember me
+                    </div>   
+                </form>     
             </div>
 
         </div>
