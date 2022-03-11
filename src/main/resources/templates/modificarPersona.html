@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://w3.org/1999/xhtml">
+    <head>
+        <title>Modificar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            
+            <a href="/personas"> Lista Personas </a>
+
+            <form th:object="${persona}"
+                  th:action="@{/editarPersona}"
+                  method="POST">
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2" for="id">ID</label>
+                    <input type="text" th:field="*{id}" class="form-control form-control-sm col-md-6" placeHolder="ID" id="id">
+                </div>
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2" for="nombre">Nombre</label>
+                    <input type="text" th:field="*{nombre}" class="form-control form-control-sm col-md-6" placeHolder="Nombre" id="nombre">
+                </div>
+                
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2" for="apellido1">Primer Apellido</label>
+                    <input type="text" th:field="*{apellido1}" class="form-control form-control-sm col-md-6" placeHolder="Primer Apellido" id="apellido1">
+                </div>
+                
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2" for="apellido2">Segundo Apellido</label>
+                    <input type="text" th:field="*{apellido2}" class="form-control form-control-sm col-md-6" placeHolder="Segundo Apellido" id="apellido2">
+                </div>
+                
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2" for="telefono">Telefono</label>
+                    <input type="text" th:field="*{telefono}" class="form-control form-control-sm col-md-6" placeHolder="Telefono" id="telefono">
+                </div>
+                
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2" for="email">Email</label>
+                    <input type="text" th:field="*{email}" class="form-control form-control-sm col-md-6" placeHolder="Email" id="email">
+                </div>
+                
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2" for="pais">Pais</label>
+                    <input type="text" th:field="*{pais}" class="form-control form-control-sm col-md-6" placeHolder="Pais" id="pais">
+                </div>
+                
+                <button type="submit" class="btn btn-primary" value="Guardar">Modificar</button>
+            </form>
+            
+        </div>
+    </body>
+</html>

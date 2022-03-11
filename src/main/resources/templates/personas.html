@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TODO supply a title</title>
+        <title>Lista de personas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <h1 th:text="${titulo}"></h1>
+        
+        <a href="/crearPersona"> crear </a>
+
         <table>
             <th:block th:each="user : ${personas}">
                 <tr>
+                    <td th:text="${user.getNombre}"></td>
                     <td th:text="${user.getApellido1}"></td>
+                    <td th:text="${user.getApellido2}"></td>
                     <td th:text="${user.getEmail}"></td>
+                    <td th:text="${user.getTelefono}"></td>
+                    <td><a th:href="@{/eliminarPersona/{id}(id=${user.getId})}"> Delete </a></td>
+                    <td><a th:href="@{/modificarPersona/{id}(id=${user.getId})}"> modificar </a></td>
                 </tr>
             </th:block>
         </table>
