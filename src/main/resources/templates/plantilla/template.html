@@ -23,7 +23,9 @@
         
 
         <footer th:fragment="Footer">
-            <p>© 2022 Daniel</p>
+            <p>© 2022 [[#{footer.copyright}]]</p>
+            <a th:href="@{/(lang=es)}">ES</a>
+            <a th:href="@{/(lang=en)}">EN</a>
         </footer>
 
     </body>
